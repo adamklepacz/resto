@@ -1,0 +1,23 @@
+{
+  "name": "resto",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamklepacz/resto.git"
+  },
+  "author": "Adam Klepacz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamklepacz/resto/issues"
+  },
+  "homepage": "https://github.com/adamklepacz/resto#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.1.0"
+  }
+}
