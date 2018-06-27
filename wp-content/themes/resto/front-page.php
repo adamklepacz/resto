@@ -19,9 +19,9 @@ get_header();
     <main id="main" class="site-main">
 
       <div class="main-banner">
-        <img src="<?php echo(get_template_directory_uri());?>/assets/img/banner.png" alt="Main site banner">
+        <img /src="<?php echo(get_template_directory_uri());?>/src/assets/img/banner.png" alt="Main site banner">
         <h1 class="main-banner__heading">It is awesome template.</h1>
-        <span class="main-banner__desc">reto restaurants page website template</span> 
+        <span class="main-banner__desc">reto restaurants page website template</span>
       </div>
 
       <div class="wrapper">
@@ -101,7 +101,7 @@ get_header();
           <ul class="dishes-list">
             <li class="dish-box">
               <a href="#" class="dish-box__link">
-                <img src="<?php echo(get_template_directory_uri());?>/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
+                <img /src="<?php echo(get_template_directory_uri());?>/src/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
                 <span class="dish-box__name">Fugiat nulla sint</span>
                 <span class="dish-box__price">$30</span>
                 <span class="dish-box__rating">
@@ -115,7 +115,7 @@ get_header();
             </li>
             <li class="dish-box">
               <a href="#" class="dish-box__link">
-                <img src="<?php echo(get_template_directory_uri());?>/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
+                <img /src="<?php echo(get_template_directory_uri());?>/src/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
                 <span class="dish-box__name">Fugiat nulla sint</span>
                 <span class="dish-box__price">$30</span>
                 <span class="dish-box__rating">
@@ -129,7 +129,7 @@ get_header();
             </li>
             <li class="dish-box">
               <a href="#" class="dish-box__link">
-                <img src="<?php echo(get_template_directory_uri());?>/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
+                <img /src="<?php echo(get_template_directory_uri());?>/src/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
                 <span class="dish-box__name">Fugiat nulla sint</span>
                 <span class="dish-box__price">$30</span>
                 <span class="dish-box__rating">
@@ -143,7 +143,7 @@ get_header();
             </li>
             <li class="dish-box">
               <a href="#" class="dish-box__link">
-                <img src="<?php echo(get_template_directory_uri());?>/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
+                <img /src="<?php echo(get_template_directory_uri());?>/src/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
                 <span class="dish-box__name">Fugiat nulla sint</span>
                 <span class="dish-box__price">$30</span>
                 <span class="dish-box__rating">
@@ -158,6 +158,8 @@ get_header();
           </ul>
         </section>
       </div>
+
+
 
     </main><!-- #main -->
   </div><!-- #primary -->
