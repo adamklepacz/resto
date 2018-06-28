@@ -1327,6 +1327,46 @@ body {
   margin: 0 auto;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row--margin>* {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.col-9 {
+  width: calc(100% - 33%);
+}
+
+.col-3 {
+  width: calc(100% - 77%);
+}
+
+.page-content {
+  margin-bottom: 32px;
+}
+
+.post {
+  border: 1px solid lightgray;
+  padding: 16px 16px;
+  margin-bottom: 32px;
+}
+
+.post .entry-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.post .entry-content {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+
 /* MAIN HEADER */
 
 .main-header {
@@ -1582,6 +1622,31 @@ body {
 }
 
 /*--------------------------------------------------------------
+## Sidebar
+--------------------------------------------------------------*/
+
+aside.widget-area {
+  border: 1px solid lightgray;
+  padding: 16px 16px;
+}
+
+aside .widget-title {
+  margin-bottom: 8px;
+}
+
+aside.widget-area .search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+aside.widget-area .search-field {
+  width: 150px;
+}
+
+
+
+/*--------------------------------------------------------------
 ## Single pages
 --------------------------------------------------------------*/
 
@@ -1697,6 +1762,11 @@ body {
 }
 
 
+
+/*--------------------------------------------------------------
+## Horizontal line component
+--------------------------------------------------------------*/
+
 .hr {
   width: 100%;
   height: 1px;
@@ -1709,4 +1779,29 @@ body {
 .hr--margin {
   margin-top: 24px;
   margin-bottom: 24px;
+}
+
+/*--------------------------------------------------------------
+## Archive site
+--------------------------------------------------------------*/
+
+.page-header .page-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+
+
+.archive aside.widget-area {
+  margin-top: 47px;
+}
+
+
+/*--------------------------------------------------------------
+## Search
+--------------------------------------------------------------*/
+
+.search .page-content p {
+  margin-bottom: 16px;
 }
