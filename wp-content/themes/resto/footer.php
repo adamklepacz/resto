@@ -39,7 +39,7 @@
 
         <ul class="footer-menu">
           <li class="footer-menu__item">
-            <img src="<?php echo(get_template_directory_uri());?>/assets/img/logo-footer.png" alt="Reto footer logo">
+            <img src="<?php echo(get_template_directory_uri());?>/src/assets/img/logo-footer.png" alt="Reto footer logo">
           </li>
           <li class="footer-menu__item">
             &copy; All rights reserved 2018.

@@ -1327,6 +1327,46 @@ body {
   margin: 0 auto;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row--margin>* {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.col-9 {
+  width: calc(100% - 33%);
+}
+
+.col-3 {
+  width: calc(100% - 77%);
+}
+
+.page-content {
+  margin-bottom: 32px;
+}
+
+.post {
+  border: 1px solid lightgray;
+  padding: 16px 16px;
+  margin-bottom: 32px;
+}
+
+.post .entry-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.post .entry-content {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+
 /* MAIN HEADER */
 
 .main-header {
@@ -1342,7 +1382,7 @@ body {
 .main-header__logo {
   display: inline-block;
   font-size: 0;
-  background-image: url("assets/img/logo.png");
+  background-image: url("src/assets/img/logo.png");
   background-repeat: no-repeat;
   height: 30px;
   width: 80px;
@@ -1435,7 +1475,7 @@ body {
 .menu-section__heading {
   margin: 0 auto;
   text-align: center;
-  background: url("assets/img/menu-shape.png");
+  background: url("src/assets/img/menu-shape.png");
   background-repeat: no-repeat;
   height: 80px;
   width: 150px;
@@ -1550,7 +1590,7 @@ body {
 
 .dish-box__star {
   display: inline-block;
-  background: url("assets/img/gold-star.png");
+  background: url("src/assets/img/gold-star.png");
   background-repeat: no-repeat;
   height: 12px;
   width: 12px;
@@ -1580,6 +1620,31 @@ body {
   letter-spacing: 0.8px;
   text-decoration: none;
 }
+
+/*--------------------------------------------------------------
+## Sidebar
+--------------------------------------------------------------*/
+
+aside.widget-area {
+  border: 1px solid lightgray;
+  padding: 16px 16px;
+}
+
+aside .widget-title {
+  margin-bottom: 8px;
+}
+
+aside.widget-area .search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+aside.widget-area .search-field {
+  width: 150px;
+}
+
+
 
 /*--------------------------------------------------------------
 ## Single pages
@@ -1657,4 +1722,86 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+
+/*--------------------------------------------------------------
+## Single post
+--------------------------------------------------------------*/
+
+.post-item {
+  border: 1px solid lightgray;
+  padding: 32px 32px;
+}
+
+.post-item__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.post-item__category {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.post-item__content {
+  margin-bottom: 16px;
+}
+
+.post-item__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-item__author {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+
+/*--------------------------------------------------------------
+## Horizontal line component
+--------------------------------------------------------------*/
+
+.hr {
+  width: 100%;
+  height: 1px;
+  background: lightgray;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.hr--margin {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/*--------------------------------------------------------------
+## Archive site
+--------------------------------------------------------------*/
+
+.page-header .page-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+
+
+.archive aside.widget-area {
+  margin-top: 47px;
+}
+
+
+/*--------------------------------------------------------------
+## Search
+--------------------------------------------------------------*/
+
+.search .page-content p {
+  margin-bottom: 16px;
 }
