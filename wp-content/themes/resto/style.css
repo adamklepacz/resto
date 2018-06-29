@@ -1805,3 +1805,40 @@ aside.widget-area .search-field {
 .search .page-content p {
   margin-bottom: 16px;
 }
+
+
+/*--------------------------------------------------------------
+## Single post
+--------------------------------------------------------------*/
+
+.paragraph-404 {
+  margin-bottom: 16px;
+}
+
+.error404 .search-form {
+  margin-bottom: 16px;
+}
+
+.error404 .widget_recent_entries {
+  margin-right: 16px;
+}
+
+.error404 .widget_recent_entries,
+.error404 .widget_categories {
+  display: inline-block;
+  border: 1px solid lightgray;
+  padding: 16px 16px;
+  width: 250px;
+}
+
+.error404 .widget-title,
+.error404 .widgettitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.error404 .widget-wrapper {
+  display: flex;
+  align-items: stretch;
+}
