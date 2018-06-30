@@ -62,7 +62,7 @@ get_header();
                   'category_name' => 'fpf-dishes',
                   'posts_per_page' => '4'
                 ));
-                
+
                 while($fdQuery -> have_posts()) : $fdQuery -> the_post();
               ?>
 
