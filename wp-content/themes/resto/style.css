@@ -1369,6 +1369,17 @@ body {
 }
 
 
+/*--------------------------------------------------------------
+## SPECIAL BUTTON
+--------------------------------------------------------------*/
+
+.special-button {
+  display: inline-block;
+  border: 2px solid lightgray;
+  padding: 8px 16px;
+  border-radius: 16px;
+}
+
 /* MAIN HEADER */
 
 .main-header {
@@ -1864,4 +1875,48 @@ aside.widget-area .search-field {
 .error404 .widget-wrapper {
   display: flex;
   align-items: stretch;
+}
+
+
+/*--------------------------------------------------------------
+## WWD LIST, WWD BOX
+--------------------------------------------------------------*/
+
+.wwd-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.wwd-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wwd-box {
+  display: block;
+  max-width: 280px;
+  border: 1px solid lightgray;
+  padding: 16px 16px;
+  margin-bottom: 40px;
+}
+
+.wwd-box__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.wwd-box__content {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.wwd-box__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
