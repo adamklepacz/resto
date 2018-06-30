@@ -1495,6 +1495,10 @@ body {
   justify-content: space-between;
 }
 
+.menu-list__link {
+  display: block;
+}
+
 .menu-list__item {
   display: block;
   width: 490px;

@@ -29,70 +29,25 @@ get_header();
         <section class="menu-section">
           <h2 class="menu-section__heading">The Menu</h2>
           <ul class="menu-list">
-            <li class="menu-list__item">
-              <div class="menu-list__wrap">
-                <span class="menu-list__name">Voluptate cillum fugiat</span>
-                <span class="menu-list__price">$50</span>
+            <?php
+              $menuListQuery = new WP_Query(array(
+                'category_name' => 'fp-menu',
+                'posts_per_page' => 8
+              ));
 
-                <span class="menu-list__desc">Chees,e tomato, mushroom, onions.</span>
-              </div>
-            </li>
-            <li class="menu-list__item">
-              <div class="menu-list__wrap">
-                <span class="menu-list__name">Voluptate cillum fugiat</span>
-                <span class="menu-list__price">$50</span>
+              while($menuListQuery -> have_posts()) : $menuListQuery -> the_post();
+             ?>
 
-                <span class="menu-list__desc">Chees,e tomato, mushroom, onions.</span>
-              </div>
-            </li>
-            <li class="menu-list__item">
-              <div class="menu-list__wrap">
-                <span class="menu-list__name">Voluptate cillum fugiat</span>
-                <span class="menu-list__price">$50</span>
-
-                <span class="menu-list__desc">Chees,e tomato, mushroom, onions.</span>
-              </div>
-            </li>
-            <li class="menu-list__item">
-              <div class="menu-list__wrap">
-                <span class="menu-list__name">Voluptate cillum fugiat</span>
-                <span class="menu-list__price">$50</span>
-
-                <span class="menu-list__desc">Chees,e tomato, mushroom, onions.</span>
-              </div>
-            </li>
-            <li class="menu-list__item">
-              <div class="menu-list__wrap">
-                <span class="menu-list__name">Voluptate cillum fugiat</span>
-                <span class="menu-list__price">$50</span>
-
-                <span class="menu-list__desc">Chees,e tomato, mushroom, onions.</span>
-              </div>
-            </li>
-            <li class="menu-list__item">
-              <div class="menu-list__wrap">
-                <span class="menu-list__name">Voluptate cillum fugiat</span>
-                <span class="menu-list__price">$50</span>
-
-                <span class="menu-list__desc">Chees,e tomato, mushroom, onions.</span>
-              </div>
-            </li>
-            <li class="menu-list__item">
-              <div class="menu-list__wrap">
-                <span class="menu-list__name">Voluptate cillum fugiat</span>
-                <span class="menu-list__price">$50</span>
-
-                <span class="menu-list__desc">Chees,e tomato, mushroom, onions.</span>
-              </div>
-            </li>
-            <li class="menu-list__item">
-              <div class="menu-list__wrap">
-                <span class="menu-list__name">Voluptate cillum fugiat</span>
-                <span class="menu-list__price">$50</span>
-
-                <span class="menu-list__desc">Chees,e tomato, mushroom, onions.</span>
-              </div>
-            </li>
+             <li class="menu-list__item">
+               <a class="menu-list__link" href="<?php the_permalink(); ?>">
+                 <div class="menu-list__wrap">
+                   <span class="menu-list__name"><?php the_title(); ?></span>
+                   <span class="menu-list__price"><?php echo get_post_meta( $post -> ID, 'price', true ); ?></span>
+                   <span class="menu-list__desc"><?php echo get_post_meta( $post -> ID, 'dish-short-description', true ); ?></span>
+                 </div>
+                </a>
+             </li>
+           <?php endwhile; ?>
           </ul>
         </section>
 
@@ -102,10 +57,12 @@ get_header();
 
           <ul class="dishes-list">
               <?php
+                // display feautred dishes on front page
                 $fdQuery = new WP_Query(array(
-                                        'category_name' => 'fpf-dishes',
-                                        'posts_per_page' => '4'
-                                      ));
+                  'category_name' => 'fpf-dishes',
+                  'posts_per_page' => '4'
+                ));
+                
                 while($fdQuery -> have_posts()) : $fdQuery -> the_post();
               ?>
 
@@ -130,10 +87,6 @@ get_header();
                   </a>
                 </li>
             <?php endwhile; ?>
-
-
-
-
           </ul>
         </section>
       </div>
