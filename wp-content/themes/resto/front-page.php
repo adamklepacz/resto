@@ -15,6 +15,7 @@
 get_header();
 ?>
 
+
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
@@ -98,63 +99,41 @@ get_header();
         <section class="feautred-dishes">
 
           <h2 class="feautred-dishes__heading">Feautred Dishes</h2>
+
           <ul class="dishes-list">
-            <li class="dish-box">
-              <a href="#" class="dish-box__link">
-                <img /src="<?php echo(get_template_directory_uri());?>/src/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
-                <span class="dish-box__name">Fugiat nulla sint</span>
-                <span class="dish-box__price">$30</span>
-                <span class="dish-box__rating">
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-              </span>
-              </a>
-            </li>
-            <li class="dish-box">
-              <a href="#" class="dish-box__link">
-                <img /src="<?php echo(get_template_directory_uri());?>/src/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
-                <span class="dish-box__name">Fugiat nulla sint</span>
-                <span class="dish-box__price">$30</span>
-                <span class="dish-box__rating">
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                </span>
-              </a>
-            </li>
-            <li class="dish-box">
-              <a href="#" class="dish-box__link">
-                <img /src="<?php echo(get_template_directory_uri());?>/src/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
-                <span class="dish-box__name">Fugiat nulla sint</span>
-                <span class="dish-box__price">$30</span>
-                <span class="dish-box__rating">
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                </span>
-              </a>
-            </li>
-            <li class="dish-box">
-              <a href="#" class="dish-box__link">
-                <img /src="<?php echo(get_template_directory_uri());?>/src/assets/img/dinner1.png" alt="Dish number 1" class="dish-box__img">
-                <span class="dish-box__name">Fugiat nulla sint</span>
-                <span class="dish-box__price">$30</span>
-                <span class="dish-box__rating">
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                  <span class="dish-box__star"></span>
-                </span>
-              </a>
-            </li>
+              <?php
+                $fdQuery = new WP_Query(array(
+                                        'category_name' => 'fpf-dishes',
+                                        'posts_per_page' => '4'
+                                      ));
+                while($fdQuery -> have_posts()) : $fdQuery -> the_post();
+              ?>
+
+                <li class="dish-box">
+                  <a href="<?php echo the_permalink(); ?>" class="dish-box__link">
+                    <?php the_post_thumbnail( $size = 'post-thumbnail', ['class' => 'dish-box__img'] ) ?>
+                    <span class="dish-box__name"><?php the_title(); ?></span>
+                    <span class="dish-box__price"><?php echo get_post_meta( $post -> ID, 'price', true )?></span>
+                    <span class="dish-box__rating">
+                      <?php
+                        $fdStars = get_post_meta( $post -> ID, 'rating', true );
+                        $fdCounter = 1;
+
+                        while($fdCounter <= $fdStars) :
+                          echo '<span class="dish-box__star"></span>';
+                          $fdCounter++;
+                        endwhile;
+
+
+                       ?>
+                    </span>
+                  </a>
+                </li>
+            <?php endwhile; ?>
+
+
+
+
           </ul>
         </section>
       </div>
@@ -166,3 +145,4 @@ get_header();
 
 <?php
 get_footer();
+error_reporting(E_ALL);
