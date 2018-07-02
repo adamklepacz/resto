@@ -16,26 +16,12 @@
   <footer class="footer">
     <div class="wrapper">
       <div class="footer-wrapper">
-        <ul class="footer-menu">
-          <li class="footer-menu__item">New York restaurants</li>
-          <li class="footer-menu__item">235 Amsterdam Route</li>
-          <li class="footer-menu__item">New York, NY 56444</li>
-          <li class="footer-menu__item">783-213-1234</li>
-        </ul>
 
-        <ul class="footer-menu">
-          <li class="footer-menu__item">France restaurants</li>
-          <li class="footer-menu__item">68 rue de la Courrone</li>
-          <li class="footer-menu__item">759993 Paris</li>
-          <li class="footer-menu__item">02.02.3232.1</li>
-        </ul>
+        <?php dynamic_sidebar( 'footer-menu-1' ); ?>
 
-        <ul class="footer-menu">
-          <li class="footer-menu__item"><a href="">Blog</a></li>
-          <li class="footer-menu__item"><a href="">Carers</a></li>
-          <li class="footer-menu__item"><a href="">Privacy Policy</a></li>
-          <li class="footer-menu__item"><a href="">Contact</a></li>
-        </ul>
+        <?php dynamic_sidebar( 'footer-menu-2' ); ?>
+
+        <?php dynamic_sidebar( 'footer-menu-3' ); ?>
 
         <ul class="footer-menu">
           <li class="footer-menu__item">
